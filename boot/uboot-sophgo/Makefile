@@ -23,9 +23,9 @@ define Build/Prepare
     $(call Build/Prepare/Default)
 	$(warning print....................... Build/Prepare: ${SUBTARGET} $$(DEVICE_DTS)  $(STAGING_DIR_IMAGE) )
 	cp files/$(SUBTARGET)/$(BUILD_DEVICES)_defconfig $(PKG_BUILD_DIR)/configs/$(BUILD_VARIANT)_defconfig
-	cp files/$(SUBTARGET)/dts/*.dts $(PKG_BUILD_DIR)/arch/aarch64/dts/
-	cp files/$(SUBTARGET)/dts/*.dtsi $(PKG_BUILD_DIR)/arch/aarch64/dts/
-	cp files/$(SUBTARGET)/dts/cvi_board_memmap.h $(PKG_BUILD_DIR)/arch/aarch64/dts/
+	cp files/$(SUBTARGET)/dts/*.dts $(PKG_BUILD_DIR)/arch/arm/dts/
+	cp files/$(SUBTARGET)/dts/*.dtsi $(PKG_BUILD_DIR)/arch/arm/dts/
+	cp files/$(SUBTARGET)/dts/cvi_board_memmap.h $(PKG_BUILD_DIR)/arch/arm/dts/
 	cp files/$(SUBTARGET)/cvitek.h $(PKG_BUILD_DIR)/include/cvitek/
 	cp files/$(SUBTARGET)/cvi_board_init.c $(PKG_BUILD_DIR)/board/cvitek/
 endef
