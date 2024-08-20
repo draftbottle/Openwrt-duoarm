@@ -10,8 +10,9 @@ PKG_RELEASE:=1
 PKG_VERSION:=2021.10
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL=https://github.com/milkv-duo/u-boot-2021.10
-PKG_SOURCE_VERSION:=a57aa1f29bb62dd9bc0c5f22b74520b8225d321f
+PKG_SOURCE_URL=https://github.com/draftbottle/uboot-sophgo
+PKG_SOURCE_VERSION:=59f64ab3055253b2cc752391c3c6f37fa1f84e10
+PKG_MIRROR_HASH=b87bfdaa37594e5bad9f2714073735effefc2bd19a31b9a7d41b98226c0134cd
 
 
 include $(INCLUDE_DIR)/u-boot.mk
