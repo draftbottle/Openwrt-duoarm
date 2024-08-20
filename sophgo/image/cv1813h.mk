@@ -3,6 +3,6 @@ define Device/milk-v-duos
   DEVICE_VENDOR := milkv.io
   DEVICE_MODEL := milkv-duos
   DEVICE_DTS_DIR := ${PWD}/cv1813h/dts
-  DEVICE_DTS := cv1813h_milkv_duos_arm64_sd
+  DEVICE_DTS := cvitek_cv1813h_milkv_duos_arm_sd
 endef
 TARGET_DEVICES += milk-v-duos
