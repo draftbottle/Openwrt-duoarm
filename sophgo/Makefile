@@ -9,9 +9,9 @@ BOARD:=sophgo
 BOARDNAME:=Sophgo U-based ARM board
 FEATURES:=ext4
 KERNELNAME:=Image
-SUBTARGETS:=sg2000
+SUBTARGETS:=cv181x cv1813h
 
-KERNEL_PATCHVER:=5.10
+KERNEL_PATCHVER:=5.15
 
 
 include $(INCLUDE_DIR)/target.mk
