@@ -40,12 +40,12 @@ define Image/Build
 	--BLCP_IMG_RUNADDR=0x05200200 \
 	--BLCP_PARAM_LOADADDR=0 \
 	--DDR_PARAM=${PWD}/image/firmware/${SUBTARGET}/ddr_param.bin \
-	--LOADER_2ND=${PWD}/image/firmware/${SUBTARGET}/u-boot.bin
+	--LOADER_2ND=$(STAGING_DIR_IMAGE)/u-boot.bin
 
 	lzma e $(STAGING_DIR_IMAGE)/Image $(STAGING_DIR_IMAGE)/Image.lzma
 
 
-	mkimage -f ${STAGING_DIR_IMAGE}/multi.its ${PWD}/image/firmware/${SUBTARGET}/boot.sd
+	mkimage -f ${STAGING_DIR_IMAGE}/multi.its $(STAGING_DIR_IMAGE)/boot.sd
 	# ${PWD}/image/genimage.sh -c  ${PWD}/image/genimage.cfg
 
 	rm -rf ${PWD}/image/tmp || true

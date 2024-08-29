@@ -35,7 +35,7 @@ define U-Boot/Default
 	BUILD_TARGET:=sophgo
 	BUILD_DEVICES=$(1)
 	UBOOT_IMAGE:=u-boot.bin
-	DTS_DIR:=arch/aarch64/dts
+	DTS_DIR:=arch/arm/dts
 	UENV:=default
 endef
 
@@ -58,7 +58,7 @@ define U-Boot/milkvduos
 	BUILD_DEVICES:=cvitek_cv1813h_milkv_duos_arm_sd
 	UBOOT_MAKE_FLAGS := \
 		CHIP=cv1813h \
-		CVIBOARD=milkv_duos_sd \
+		CVIBOARD=milkv_duos_arm_sd \
 		BOARD=cv181x \
 		CHIP_SEGMENT=cv181x
 endef
