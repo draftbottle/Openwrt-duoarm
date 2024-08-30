@@ -16,32 +16,18 @@
 			arch = "arm64";
 			os = "linux";
 			compression = "lzma";
-			load = <0x0 0x80108000>;
-			entry = <0x0 0x80108000>;
+			load = <0x0 0x80200000>;
+			entry = <0x0 0x80200000>;
 			hash-2 {
-				algo = "crc32";
-			};
-		};
-
-		ramdisk-1 {
-			description = "cvitek ramdisk";
-			data = /incbin/("./boot.cpio.gz");
-			type = "ramdisk";
-			arch = "arm64";
-			os = "linux";
-			compression = "gzip";
-			load = <00000000>;
-			entry = <00000000>;
-			hash-1 {
 				algo = "crc32";
 			};
 		};
 
 		/*FDT*/
     
-        fdt-sg2000_milkv_duos_glibc_arm64_sd {
+        fdt-1 {
             description = "cvitek device tree - sg2000_milkv_duos_glibc_arm64_sd";
-            data = /incbin/("./sg2000_milkv_duos_glibc_arm64_sd.dtb");
+            data = /incbin/("./cv1813h_milkv_duos_arm_sd.dtb");
             type = "flat_dt";
             arch = "arm64";
             compression = "none";
@@ -55,11 +41,10 @@
 	/*CFG*/
     configurations {
         
-        config-sg2000_milkv_duos_glibc_arm64_sd {
+        config-cv18xx-openwrt {
             description = "boot cvitek system with board sg2000_milkv_duos_glibc_arm64_sd";
             kernel = "kernel-1";
-            ramdisk = "ramdisk-1";
-            fdt = "fdt-sg2000_milkv_duos_glibc_arm64_sd";
+            fdt = "fdt-1";
         };
     };
 };
